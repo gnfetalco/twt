@@ -1,0 +1,797 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+/*-----   Styles for the navigation bar -----*/
+
+.navbar {
+	display: flex;
+	align-items: center;
+	background-color: GhostWhite;
+	padding-left: 20px;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+
+.right {
+	width: 100%;
+}
+
+.row {
+	padding-left: 25px;
+	align-items: center;
+}
+
+.top {
+	font-family: "Blackadder ITC", sans-serif;
+	font-size: 40px;
+}
+
+.bot {
+	display: flex;
+	background-color: #8FBC8F;
+}
+
+.nav-links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	height: 50px;
+}
+
+.nav-links li {
+	list-style: none;
+	width: 110px;
+	text-align: center;
+}
+
+.nav-links li a {
+	text-decoration: none;
+	padding: 10px;
+	padding-top: 15px;
+	display: block;
+	color: #f2f2f2;
+	size: 17px;
+}
+
+.nav-links li:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.active {
+	background-color: #333;
+	color: white;
+}
+
+.hamburg {
+	position: absolute;
+	display: none;
+	top: 66px;
+	right: 1rem;
+	width: 30px;
+	height: 21px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hamburg .bar {
+	height: 3px;
+	width: 100%;
+	background-color: #f2f2f2;
+	border-radius: 10px;
+}
+
+.box {
+	display: none;
+	
+}
+
+@media (max-width: 600px) {
+	.hamburg {
+		display: flex;
+	}
+
+	.bot {
+		flex-direction: column;
+		align-items: flex-start;
+		height: 50px;
+		padding-left: 0;
+	}
+	
+	.nav-links {
+		display: none;
+		width: 100%;
+	}
+	
+	.nav-links ul {
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	.nav-links li {
+		text-align: center;
+		background-color: #8FBC8F;
+	}
+	
+	.nav-links.active {
+		display: flex;
+	}
+	
+	.box {
+		display: flex;
+		height: 50px;
+		color: #8FBC8F;
+		font-size: 50px;
+	}
+}
+/*-----  End of the navigation bar -----*/
+
+/*-----   Styles for the index.ejs -----*/
+
+.mainbody {
+	display: flex;
+	flex-direction: column;
+	height: 85vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.body-title {
+	text-align: center;
+	text-decoration: underline;
+	margin-top: auto;
+	margin-bottom: 50px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 50px;
+	text-shadow: 5px 5px 10px #fffaf0, -5px -5px 10px #fffaf0;
+	overflow: hidden;
+}
+
+.one {
+	animation: Slide_Up 1.4s ease, fadeIn 2s;
+}
+
+.two {
+	margin-top: 0;
+	animation: Slide_Up 2s ease, fadeIn 3s;
+}
+
+.button {
+	background-color: #8FBC8F;
+	color: white;
+	padding: 14px 35px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	border: 2px solid black;
+	text-decoration: none;
+}
+
+.body-bot {
+	display: flex;
+	margin-top: auto;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+	text-shadow: 5px 5px 10px #fffaf0, -5px -5px 10px #fffaf0;
+}
+
+.bg-modal {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	opacity: 1;
+	position: absolute;
+	top: 0;
+}
+
+.bg-modal[open] {
+	animation: fade-in 1s;
+}
+
+.modal-content {
+	position: absolute;
+	text-align: center;
+	width: 400px;
+	height: 500px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.go-back {
+	padding: 5px;
+	width: 65px;
+	background: #8FBC8F;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.go-back a {
+	text-decoration: none;
+	color: black;
+}
+
+.go-back:hover {
+	background-color: #45a049;
+}
+
+.booking-form {
+	display: flex;
+	position: relative;
+	height: 500px;
+	width: 400px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.booking-form form {
+	display: flex;
+	flex-direction: column;
+}
+
+.book-input {
+	width: 300px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.booking-form form button {
+	width: 340px;
+	background-color: #8FBC8F;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.booking-form form button:hover {
+  background-color: #45a049;
+}
+
+.booking-form form label {
+	font-size: 12px;
+	color: gray;
+}
+
+.booking-form form select {
+	width: 140px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+@media (max-width: 950px) {
+	.body-bot {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 550px) {
+	.body-title {
+		font-size: 40px;
+	}
+}
+
+@keyframes Slide_Up {
+	0% {
+		transform: translateY(150px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*-----  End of index.ejs -----*/
+
+/*-----   Styles for aboutus.ejs -----*/
+
+.about-title {
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.about-title h1 {
+	margin-bottom: 0;
+	text-align: center;
+	text-decoration: underline;
+	font-style: italic;
+	text-shadow: 5px 5px 10px #fffaf0, -5px -5px 10px #fffaf0;
+	animation: titleEfct 3s ease;
+}
+
+.table { /* 3 column container */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.column { /* Columns for About Us page. Will stack on top of each other when resized smaller */
+	display: block;
+	width: 400px;
+	padding: 20px;
+	height: 485px;
+}
+
+.about-left {
+	animation: fadeIn 3s, rTOl 2s ease;
+	text-align: center;
+}
+
+.about-mid {
+	animation: fadeIn 3s;
+	text-align: center;
+	border-left: 3px solid grey;
+	border-right: 3px solid grey;
+}
+
+.about-right {
+	animation: fadeIn 3s, lTOr 2s ease;
+}
+
+@keyframes titleEfct {
+	0% {
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes lTOr {
+	0% { transform: translateX(150px); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes rTOl {
+	0% { transform: translateX(-150px); }
+	100% { transform: translateX(0); }
+}
+
+@media (max-width: 900px) {
+	.about-mid {
+		border-left: 0px solid !important;
+		border-right: 0px solid !important;
+	}
+}
+
+/*-----  End of aboutus.ejs -----*/
+
+/*-----   Styles for reviews.ejs -----*/
+
+.rev-body {
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-rev {
+	display: flex;
+	height: 350px;
+	width: 50%;
+	justify-content: center;
+	
+}
+
+.main-review-body {
+	display: flex;
+	height: 300px;
+}
+
+.main-comments {
+	display: flex;
+	flex-direction: row;
+	padding: 30px;
+	margin: 15px;
+	width: 500px;
+	height: 250px;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 15px;
+	flex-shrink: none;
+}
+
+.reviews {
+	display: flex;
+	width: 70%;
+	height: 200px;
+	padding: 10px;
+	overflow: auto;
+	
+}
+
+.review-body {
+	display: flex;
+	height: 170px;
+	
+}
+
+.cust-comments {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px 0 10px;
+	margin: 15px;
+	width: 230px;
+	height: 120px;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 15px;
+	flex-shrink: none;
+}
+
+/*-----  End of reviews.ejs -----*/
+
+/*-----   Styles for menu.ejs -----*/
+
+.body-top {
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.selection {
+	display: flex;
+	position: relative;
+	width: 500px;
+	height: 300px;
+	margin: 40px;
+	font-family: "Blackadder ITC", sans-serif;
+	font-size: 40px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.selection a {
+	text-decoration: none;
+	color: black;
+}
+
+.selection img {
+	position: absolute;
+	width: 100%;
+	filter: blur(5px);
+}
+
+.selection:hover img {
+	filter: none;
+}
+
+.extra {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 25px;
+	z-index: 1;
+}
+
+.breakfast, .lunch {
+	display: flex;
+	width: 70%;
+	margin: 10px;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 25px;
+}
+
+.food1 img {
+	border-radius: 25px;
+}
+
+.food-body {
+	margin: 20px;
+}
+
+.food-name {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.food-ingr {
+	font-size: 12px;
+	font-style: italic;
+}
+
+.food-desc {
+	font-size: 18px;
+}
+
+.to-top {
+	position: fixed;
+	bottom: 10%;
+	padding: 5px;
+	width: 65px;
+	background: #45a049;
+	border-radius: 10px;
+	text-align: center;
+	border: 3px solid white;
+}
+
+.to-top a {
+	text-decoration: none;
+	color: white;
+}
+
+.hide {
+	opacity: 0;
+	right: 2%;
+	animation: tTob 3s ease;
+}
+
+.show {
+	opacity: 1;
+	right: 2%;
+	animation: bTot 1s;
+}
+
+@keyframes bTot {
+	0% { transform: translateY(60px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes tTob {
+	0% { transform: translateY(-60px); }
+	100% { transform: translateY(0); }
+}
+
+/*-----  End of menu.ejs -----*/
+
+/*-----   Styles for contact.ejs -----*/
+
+.cont-body {
+	display: flex;
+	height: 85%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.inq-form {
+	display: flex;
+	padding: 12px;
+	width: 350px;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 15px;
+	justify-content: center;
+}
+
+.inq-form input[type=text] {
+	width: 300px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.inq-form textarea {
+	width: 300px;
+	height: 100px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.inq-form button {
+	width: 300px;
+	background-color: #8FBC8F;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.inq-form button:hover {
+  background-color: #45a049;
+}
+
+.inq-form, .address {
+	margin-left: 20%;
+}
+
+.address {
+	padding: 12px;
+	margin-top: 20px;
+	width: 350px;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 15px;
+}
+
+@media (max-width: 500px) {
+	.inq-form, .address {
+		margin-left: 0%;
+	}
+}
+
+/*-----  End of contact.ejs -----*/
+
+/*-----   Styles for adminpage.ejs -----*/
+
+.adminbody {
+	display: flex;
+	flex-direction: row;
+	height: 98vh;
+	align-items: center;
+	justify-content: center;	
+}
+
+.adminbox {
+	display: flex;
+	position: relative;
+	width: 300px;
+	height: 170px;
+	margin: 10px;
+	font-size: 20px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	overflow: hidden;
+	background: rgba(220, 220, 220, 0.8);
+	border: 4px solid white;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 900px) {
+	.adminbody {
+		flex-direction: column;
+	}
+}
+
+/*-----  End of the adminpage.ejs -----*/
+
+/*-----   Styles for the revform.ejs -----*/
+
+.rev-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 99vh;
+}
+
+.testi-body {
+	display: flex;
+	flex-direction: column;
+	height: 390px;
+	padding: 10px;
+	justify-content: center;
+	border-radius: 15px;
+	background: rgba(220, 220, 220, 0.8);
+	border: 4px solid white;
+}
+
+.rev-form {
+	display: flex;
+	padding: 20px;
+	height: 300px;
+	align-items: center;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 15px;
+}
+
+.rev-form input[type=text] {
+	width: 300px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.rev-form textarea {
+	width: 300px;
+	height: 100px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.rev-form button {
+	width: 300px;
+	background-color: #8FBC8F;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/*-----  End of the revform.ejs -----*/
+
+/*-----   Styles for the bookatable.ejs -----*/
+
+.book-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 99vh;
+}
+
+.book-body {
+	display: flex;
+	border: 4px solid white;
+	padding: 5px;
+	flex-direction: column;
+	background: rgba(220, 220, 220, 0.8);
+	border-radius: 9px;
+}
+
+/*-----  End of bookatable.ejs -----*/
+
+/*-----   Styles for the footer bar -----*/
+
+.footer {
+	background-color: #AAF0D1;
+	width: 100vw;
+	height: 40px;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+}
+
+.footnote {
+	display: flex;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+}
+
+#footlogo {
+	width: 30px;
+}
+
+@media (max-width: 600px) {
+	.left, .right {
+		display: none;
+	}
+}
+
+/*-----  End of the footer bar -----*/

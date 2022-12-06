@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+/*-----   Styles for the index.ejs  -----*/
+
+.booknow {
+	width: 200px;
+	height: 50px;
+	color: white;
+	background-color: #8FBC8F;
+	margin: 8px 0;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 18px;
+	border: 2px solid black;
+}
+
+.booknow:hover {
+  background-color: #45a049;
+}
+
+/*-----  End of index.ejs  -----*/
+
+/*-----   Styles for reviews.ejs -----*/
+
+.icon {
+	position: absolute;
+	right: 5%;
+	font-size: 20px;
+}
+
+/*-----  End of reviews.ejs -----*/
+
+/*-----   Styles for the menu.ejs -----*/
+
+.titletext {
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.titlebox {
+	background-color: Green;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	width: 250px;
+	border: 2px solid Gainsboro;
+	height: 50px;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	border-radius: 8px;
+}
+
+/*-----  End of menu.ejs -----*/
+
+
+
