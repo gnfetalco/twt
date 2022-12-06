@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wholesome Table - Testimonials Form</title>
+		
+		<style>
+				body {
+					background-image:url("/public/assets/images/booktable.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: 100vh;
+				}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+</head>
+<body>
+
+
+	<div class="rev-main">
+		<div class="testi-body">
+			<div class="go-back"><a href="/adminpage">Go Back</a></div>
+			<div class="rev-form">
+				<form action="/revform" method="POST" onsubmit="alert('Testimonial Posted!');">
+					<h3>Tell us what you think!</h3>
+					<input type="text" placeholder="Your name here" name="rname"><br>
+					<textarea placeholder="Your review here" name="rmsg" maxlength="150" id="form-textarea"></textarea><br>
+					<div id="rem-char">150 / 150</div>
+					<button type="submit" class="rev-button">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="/public/assets/javascript/textareacount.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wholesome Table - Testimonials</title>
+		
+		<style>
+				body {
+					background-image:url("/public/assets/images/bggallery.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: 100vh;
+				}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+	
+	<!-- ========== NAVIGATION BAR ========== -->
+	<nav class="navbar">
+	
+		<div class="col"><img src="/public/assets/images/logo.png" style="width:97px"></div>
+		
+		<div class="col right">
+			<div class="row top">The Wholesome Table</div>
+			
+			<div class="row bot">
+				<div class="box">.</div>
+				<div class="nav-links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/aboutus">About Us</a></li>
+						<li class="active"><a href="#">Testimonials</a></li>
+						<li><a href="/menu">Menu</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+				
+				<a href="#" class="hamburg">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="rev-body">
+		
+		<div class="main-rev"> <!-- Highlighted Comment -->
+			<div class="main-review-body">
+				<% if(oneData.length!=0) { oneData.forEach(function(data) {
+				%>
+				<div class="main-comments">
+					<div><i class="fas fa-quote-left" style="font-size: 60px;"></i></div>
+					<div style="margin-left: 30px; width: 100%">
+						<p style="font-style: italic; font-size: 30px">"<%=data.message %>"</p>
+						<p style="text-indent: 80%; text-transform: uppercase; font-style: italic;">-&nbsp<%=data.name %></p>
+					</div>
+				</div>
+					<% }) %> <% } else { %>
+				<div>
+					<h1>No Data Found</h1>
+				</div>
+				<% } %>
+			</div>
+		</div>
+		
+		<div class="reviews"> <!-- Bottom Customer comments -->
+			<div class="review-body">
+				<% if(revData.length!=0) { var i=1; revData.forEach(function(data) {
+				%>
+				<div class="cust-comments"><p style="font-weight: bold; font-size: 18px; text-transform: uppercase; margin-bottom: 5px"><%=data.name %></p>
+				<p style="margin-top:0; font-size: 13px; font-style: italic">"<%=data.message %>"</p></div>
+				<% i++; }) %> <% } else { %>
+				<div><h1>No Data Found</h1></div>
+				<% } %>
+			</div>
+		</div>
+		
+	</div>
+		
+		
+	
+	<!-- ========== FOOTER ========== -->
+	<div class="footer">
+		<div class="footnote left">
+			<center><a href="legal.html" target="_blank" style="text-decoration:none;color:black;">Legal</a></center>
+		</div>
+		<div class="footnote mid">
+			<a href="https://www.facebook.com/login.php/" target="_blank"><img src="/public/assets/images/fblogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="/public/assets/images/iglogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://twitter.com/i/flow/login" target="_blank"><img src="/public/assets/images/twlogo.png" id="footlogo"></a>
+			
+		</div>
+		<div class="footnote right">
+			The Wholesome Table &#xA9; 2022
+			
+		</div>			
+	</div>
+	<script src="/public/assets/javascript/navbar.js"></script>
+</body>
+
+</html>

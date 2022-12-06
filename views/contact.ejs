@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wholesome Table - Contact Us</title>
+		
+		<style>
+				body {
+					background-image:url("/public/assets/images/bgcontact.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: 100vh;
+				}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+	<!-- ========== NAVIGATION BAR ========== -->
+	<nav class="navbar">
+	
+		<div class="col"><img src="/public/assets/images/logo.png" style="width:97px"></div>
+		
+		<div class="col right">
+			<div class="row top">The Wholesome Table</div>
+			
+			<div class="row bot">
+				<div class="box">.</div>
+				<div class="nav-links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/aboutus">About Us</a></li>
+						<li><a href="/reviews">Testimonials</a></li>
+						<li><a href="/menu">Menu</a></li>
+						<li class="active"><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<a href="#" class="hamburg">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				</a>			
+			</div>
+		</div>
+		
+	</nav>
+	
+	<!-- ========== BODY ========== -->
+	<div class="cont-body">
+		<div class="inq-form"> <!-- Inquiry form  -->
+			<form action="/contact" method="post" onsubmit="alert('Thank you for your inquiry. We will get back to you as soon as possible!');"><center>
+				<h3>Inquire now!</h3>
+				<input type="text" "id="cust-name" placeholder="Your Name here"name="cname"><br>
+				<input type="text" id="cust-email" placeholder="Your Email here"name="cemail"><br>
+				<textarea id="message" placeholder="Tell us your inquiry" name="message"></textarea><br>
+				<button type="submit">Submit</button>
+			</center></form>
+		</div>
+		
+		<div class="address"> <!-- Company information -->
+			<strong>Meet Us</strong><br>
+			<i class="material-icons" style="font-size:18px">place</i> 45 Hereford Street Christchurch Central, Christchurch City<br><br>
+			<strong>Let's Talk</strong><br>
+			<i class="material-icons" style="font-size:18px">local_phone</i> 03 123 4567<br>
+			<i class="material-icons" style="font-size:18px">stay_current_portrait</i> 0225678934<br>
+			&#x2709; info@thewholesometable.co.nz
+		</div>
+	</div>
+
+	
+	<!-- ========== FOOTER ========== -->
+	<div class="footer">
+		<div class="footnote left">
+			<center><a href="legal.html" target="_blank" style="text-decoration:none;color:black;">Legal</a></center>
+		</div>
+		<div class="footnote mid">
+			<a href="https://www.facebook.com/login.php/" target="_blank"><img src="/public/assets/images/fblogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="/public/assets/images/iglogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://twitter.com/i/flow/login" target="_blank"><img src="/public/assets/images/twlogo.png" id="footlogo"></a>
+			
+		</div>
+		<div class="footnote right">
+			The Wholesome Table &#xA9; 2022
+			
+		</div>			
+	</div>
+	<script src="/public/assets/javascript/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wholesome Table - Menu</title>
+	<style>
+			html {
+				scroll-behavior: smooth;
+			}
+			.bg {
+				height: 110vh;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding: 20px;
+				box-shadow: 0 10px 10px white inset, 0 -10px 10px white inset;
+			}
+			.image1 {
+				background-image: url("/public/assets/images/bgmenu1.jpg");
+			}
+			.image2 {
+				background-image: url("/public/assets/images/bgmenu2.jpg");
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.image3 {
+				background-image: url("/public/assets/images/bgmenu3.jpg");
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+	</style>
+	
+	<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+	
+	<!-- ========== NAVIGATION BAR ========== -->
+	<nav class="navbar">
+	
+		<div class="col"><img src="/public/assets/images/logo.png" style="width:97px"></div>
+		
+		<div class="col right">
+			<div class="row top">The Wholesome Table</div>
+			
+			<div class="row bot">
+				<div class="box">.</div>
+				<div class="nav-links">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/aboutus">About Us</a></li>
+						<li><a href="/reviews">Testimonials</a></li>
+						<li class="active"><a href="#">Menu</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+				
+				<a href="#" class="hamburg">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				</a>
+			</div>
+		</div>
+		
+	</nav>
+
+	<!-- ========== BODY ========== -->
+	<div class="bg image1">
+		<div class="about-title">
+			<h1>MENU</h1>
+		</div>
+		<div class="body-top">
+			<div class="selection" style="border: 5px solid white">
+				<img src="/public/assets/images/bfast-peanut-butter-banana-muffin.jpg">
+				<a href="#bfast" style="z-index: 99">Our Breakfast Selections
+					<span class="extra"></span>
+				</a>
+			</div>
+			
+			<div class="selection" style="border: 5px solid white">
+				<img src="/public/assets/images/lunch-adobo-beef-torta.jpg">
+				<a href="#lunch" style="z-index: 99">Our Lunch Selections
+					<span class="extra"></span>
+				</a>
+			</div>	
+		</div>
+	</div>
+	
+	<div class="bg image2"> <!-- The Breakfast part of the menu -->
+		<div class="breakfast" id="bfast">
+			<div class="food1">
+				<img src="/public/assets/images/bfast-olive-toast-w-berries.jpg" alt="Olive Toast with Berries"  style="height:32vh"></img>
+			</div>
+			<div class="food-body">
+				<p class="food-name">Olive Toast with Berries</p>
+				<p class="food-ingr">(Olive Bread, Raspberry or BLueberry, Honey, Cream Cheese, Chilies}</p>
+				<p class="food-desc">The combination of the olives in the bread with cream cheese and honey, with pinch of chopped fresh or dry spicy chilies, yet spicy fruit is simply delicious. </p>
+			</div>
+		</div>
+		<div class="breakfast">
+			<div class="food1">
+				<img src="/public/assets/images/bfast-peanut-butter-banana-muffin.jpg" alt="Olive Toast with Berries" style="height:32vh"></img>
+			</div>
+			<div class="food-body">
+				<p class="food-name">Peanut Butter Banana Muffin</p>
+				<p class="food-ingr">(Cereals, Baking Soda, Salt, Rice Flour, Ripe Banana, Honey, Organic Peanut Butter, Free Range Eggs)</p>
+				<p class="food-desc">Gluten and dairy free. Made with organic ingredients. Topped with few choco chips, perfect for your breakfast needs, served freshly baked.</p>
+			</div>
+		</div>
+		<div class="breakfast">
+			<div class="food1">
+				<img src="/public/assets/images/bfast-pumpkin-pancake.jpg" alt="Olive Toast with Berries"  style="height:32vh"></img>
+			</div>
+			<div class="food-body">
+				<p class="food-name">Pumpkin Pancake</p>
+				<p class="food-ingr">(Flour, Melted Butter, Baking Powder, Salt, Sugar, Eggs)</p>
+				<p class="food-desc">Fresh organic pumpkin from our local supplier, mixed with our in-house ingredients. All from local suppliers. Served hot and fresh.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="bg image3"> <!-- The Lunch part of the menu -->
+		<div class="lunch" id="lunch">
+			<div class="food-body" style="text-align:right">
+				<p class="food-name">Adobo Beef Torta</p>
+				<p class="food-ingr">(Olive Bread, Raspberry or BLueberry, Honey, Cream Cheese, Chilies}</p>
+				<p class="food-desc">The combination of the olives in the bread with cream cheese and honey, with pinch of chopped fresh or dry spicy chilies, yet spicy fruit is simply delicious. </p>
+			</div>
+			<div class="food1">
+				<img src="/public/assets/images/lunch-adobo-beef-torta.jpg" alt="Olive Toast with Berries"  style="height:32vh"></img>
+			</div>
+		</div>
+		<div class="lunch">
+			<div class="food-body" style="text-align:right">
+				<p class="food-name">Angel Hair Shrimp Pasta</p>
+				<p class="food-ingr">(Cereals, Baking Soda, Salt, Rice Flour, Ripe Banana, Honey, Organic Peanut Butter, Free Range Eggs)</p>
+				<p class="food-desc">Gluten and dairy free. Made with organic ingredients. Topped with few choco chips, perfect for your breakfast needs, served freshly baked.</p>
+			</div>
+			<div class="food1">
+				<img src="/public/assets/images/lunch-angel-hair-shrimp-pasta.jpg" alt="Olive Toast with Berries" style="height:32vh"></img>
+			</div>
+		</div>
+		<div class="lunch">
+			<div class="food-body" style="text-align:right">
+				<p class="food-name">Chicken Stirfry with Cauliflower Rice</p>
+				<p class="food-ingr">(Flour, Melted Butter, Baking Powder, Salt, Sugar, Eggs)</p>
+				<p class="food-desc">Fresh organic pumpkin from our local supplier, mixed with our in-house ingredients. All from local suppliers. Served hot and fresh.</p>
+			</div>
+			<div class="food1">
+				<img src="/public/assets/images/lunch-chicken-stirfry-w-cauliflower-rice.jpg" alt="Olive Toast with Berries"  style="height:32vh"></img>
+			</div>
+		</div>
+	</div>
+	
+	<!-- This is the button will appear on the right bottom part of the page when user start scrolling down, if clicked it will take them back to the top of the page -->
+	<div id="gototop" class="to-top hide"><a href="#">Back to Top<span class="extra"></span></a></div>
+	
+	<!-- ========== FOOTER ========== -->
+	<div class="footer">
+		<div class="footnote left">
+			<center><a href="legal.html" target="_blank" style="text-decoration:none;color:black;">Legal</a></center>
+		</div>
+		<div class="footnote mid">
+			<a href="https://www.facebook.com/login.php/" target="_blank"><img src="/public/assets/images/fblogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="/public/assets/images/iglogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://twitter.com/i/flow/login" target="_blank"><img src="/public/assets/images/twlogo.png" id="footlogo"></a>
+			
+		</div>
+		<div class="footnote right">
+			The Wholesome Table &#xA9; 2022
+			
+		</div>			
+	</div>
+	<script src="/public/assets/javascript/navbar.js"></script>
+	
+	<!-- This script is for the scrolling Back To Top button -->
+	<script>
+		gtTop = document.getElementById("gototop");
+		var myScrollFunc = function() {
+		  var y = window.scrollY;
+		  if (y >= 800) {
+			gtTop.className = "to-top show"
+		  } else {
+			gtTop.className = "to-top hide"
+		  }
+		};
+		window.addEventListener("scroll", myScrollFunc);
+	</script>
+</body>
+</html>

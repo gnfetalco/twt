@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wholesome Table - Home</title>
+		
+		<style>
+				body {
+					background-image:url("/public/assets/images/bgindex.jpg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					height: 100vh;
+				}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="/public/assets/css/styles.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<!-- ========== NAVIGATION BAR ========== -->
+	<nav class="navbar">
+	
+		<div class="col"><img src="/public/assets/images/logo.png" style="width:97px"></div>
+		
+		<div class="col right">
+			<div class="row top">The Wholesome Table</div>
+			
+			<div class="row bot">
+				<div class="box">.</div>
+				<div class="nav-links">
+					<ul>
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="/aboutus">About Us</a></li>
+						<li><a href="/reviews">Testimonials</a></li>
+						<li><a href="/menu">Menu</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+				<a href="#" class="hamburg">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+				</a>
+			</div>
+		</div>
+		
+	</nav>
+
+	<!-- ========== BODY ========== -->
+
+	<div class="mainbody">
+		<div class="body-title">
+			<p class="one">Nourish your body with</p>
+			<p class="two">Organic Food</p>
+		</div>
+		
+		<div>
+			<a href="#" id="button" class="button">Book Now</a>
+		</div>
+		
+		<div class="body-bot">
+			<p>Our Promise<br><br>
+			<i class="fa-solid fa-bowl-food"></i>&nbsp;Organic Food &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+			<i class="fa-solid fa-seedling"></i>&nbsp;Sustainability&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; 
+			<i class="fa-solid fa-recycle"></i>&nbsp;Eco Friendly</p>
+		</div>
+	</div>
+	
+	<!-- ========== BOOKING MODAL ========== -->
+	
+	<div class="bg-modal">
+		<div class="modal-content">
+			<div class="go-back"><a href="#">Go Back</a></div>
+			<div class="booking-form">
+				<h2>Book a Table</h2>
+				<form action="/" method="POST" onsubmit="alert('Booking Submitted');">
+					<label for="name">Name</label>
+					<input class="book-input" type="text" name="name" placeholder="Your Name here" required/>
+					
+					<label for="mobile">Mobile</label>
+					<input class="book-input" type="text" name="mobile" placeholder="Mobile Number" required/>
+					
+					<div style="display: flex; flex-direction:row; justify-content: space-between">
+						<div style="display: flex; flex-direction:column">
+							<label for="pax">Number of Pax</label><br><br>
+							<select name="pax">
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select>
+						</div>
+						<div style="display: flex; flex-direction:column">
+							<label for="time">Time</label><br>
+							<select name="time" id="time">
+								<option value="8am">8am</option>
+								<option value="9am">9am</option>
+								<option value="10am">10am</option>
+								<option value="11am">11am</option>
+								<option value="12pm">12nn</option>
+								<option value="1pm">1pm</option>
+								<option value="2pm">2pm</option>
+								<option value="3pm">3pm</option>
+							</select>
+						</div>
+					</div>
+					<label for="date">Date</label>
+					<input id="date" class="book-input" type="date" name="date" placeholder="Pick a date" onkeydown="return false" required/>
+
+					<button type="submit">Submit</button>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<!-- ========== FOOTER ========== -->
+	<div class="footer">
+		<div class="footnote left">
+			<center><a href="legal.html" target="_blank" style="text-decoration:none;color:black;">Legal</a></center>
+		</div>
+		<div class="footnote mid">
+			<a href="https://www.facebook.com/login.php/" target="_blank"><img src="/public/assets/images/fblogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="/public/assets/images/iglogo.png" id="footlogo" style="margin-right: 30px;"></a>
+			<a href="https://twitter.com/i/flow/login" target="_blank"><img src="/public/assets/images/twlogo.png" id="footlogo"></a>
+			
+		</div>
+		<div class="footnote right">
+			The Wholesome Table &#xA9; 2022
+			
+		</div>			
+	</div>
+	
+	<script src="/public/assets/javascript/navbar.js"></script>
+	<script src="/public/assets/javascript/modal.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			var dtToday = new Date();
+		 
+			var month = dtToday.getMonth() + 1;
+			var day = dtToday.getDate();
+			var year = dtToday.getFullYear();
+			if(month < 10)
+				month = '0' + month.toString();
+			if(day < 10)
+			 day = '0' + day.toString();
+			var maxDate = year + '-' + month + '-' + day;
+			$('#date').attr('min', maxDate);
+		});
+	</script>
+</body>
+</html>

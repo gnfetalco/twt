@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Booking Data from MySQLdb</title>
+	<style>
+		a {
+					text-decoration: none;
+					color: black;
+		}
+	</style>
+	<link rel="stylesheet" href="/public/assets/css/dbstyles.css" />
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Date Booked</th>
+			<th>Name</th>
+			<th>Mobile Number</th>
+			<th>No. of Pax</th>
+			<th>Time</th>
+			<th>Reserved Date</th>
+		</tr>
+		
+		<% if(userData.length!=0) { var i=1; userData.forEach(function(data) {
+		%>
+		<tr>
+			<td><%=data.date %></td>
+			<td><%=data.name %></td>
+			<td><%=data.mobile %></td>
+			<td><%=data.pax %></td>
+			<td><%=data.time %></td>
+			<td><%=data.rsrv_date %></td>
+		</tr>
+		<% i++; }) %> <% } else { %>
+		<tr>
+			<td colspan="7">No Data Found</td>
+		</tr>
+		<% } %>
+	</table><br><br>
+	<a href="/adminpage">Back to Admin Page</a>
+</body>
+</html>
